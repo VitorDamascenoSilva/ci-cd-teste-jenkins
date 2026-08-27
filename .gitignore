@@ -141,3 +141,4 @@ vite.config.ts.timestamp-*
 videos/
 screenshots/
 allure-results/
+allure-report/
