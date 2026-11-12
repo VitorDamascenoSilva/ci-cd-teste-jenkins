@@ -14,26 +14,10 @@ pipeline {
         }
 
         stage('Execução dos testes') {
-            parallel {
-                stage('Testes da suite 1') {
-                    steps {
-                        sh 'npm run teste-suite-1'
-                    }
-                }
-
-                stage('Testes da suite 2') {
-                    steps {
-                        sh 'npm run teste-suite-2'
-                    }
-                }
-
-                stage('Testes da suite 3') {
-                    steps {
-                        sh 'npm run teste-suite-3'
-                    }
-                }
-
-            }
+            steps {
+        sh 'npm run teste-suite-1'
+        sh 'npm run teste-suite-2'
+        sh 'npm run teste-suite-3'
         }
 
         stage('Gerar relatório Allure') {
