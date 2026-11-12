@@ -6,7 +6,10 @@
   "scripts": {
     "test": "npx cypress run --browser electron",
     "report:generate": "npx allure generate allure-results --clean -o allure-report",
-    "report": "npx allure open allure-report"
+    "report": "npx allure open allure-report",
+    "teste-suite-1": "cypress run --browser electron --spec 'cypress/e2e/1-getting-started/**/*.cy.js'",
+    "teste-suite-2": "cypress run --browser electron --spec 'cypress/e2e/2-advanced-examples/**/*.cy.js'",
+    "teste-suite-3": "cypress run --browser electron --spec 'cypress/e2e/3-paralelo/**/*.cy.js'"
   },
   "repository": {
     "type": "git",
@@ -27,5 +30,8 @@
     "allure-commandline": "^2.34.1",
     "allure-cypress": "^3.11.0",
     "mocha-allure-reporter": "^1.4.0"
+  },
+  "allowScripts": {
+    "cypress@14.5.4": true
   }
 }
